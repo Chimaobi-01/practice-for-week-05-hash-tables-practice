@@ -19,10 +19,8 @@ describe('Hash table constructor', () => {
     expect(hashTable.capacity).to.equal(2);
     expect(hashTable.data instanceof Array).to.be.true;
     expect(hashTable.data.length).to.equal(2);
-
     expect(hashTable.data[0]).to.equal(null);
     expect(hashTable.data[1]).to.equal(null);
-
   });
 
   it('can initialize to different sizes', () => {
@@ -70,7 +68,6 @@ describe('Hash table methods', () => {
 
     // First 8 digits of sha256("hello world") are 0xb94d27b9
     expect(hashTable.hash("hello world")).to.equal(3108841401);
-
   });
 
   it('hashMod method returns the hash value modulo the number of buckets', () => {
@@ -93,5 +90,5 @@ describe('Hash table methods', () => {
     expect(hashTable.hashMod("hello world")).to.equal(1);
 
   });
-
+  
 });
